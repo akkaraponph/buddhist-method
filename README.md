@@ -37,13 +37,20 @@ The skill is **not** a religious framework. It does not require belief, ritual, 
 
 ### With Claude Code
 
-Place the folder under your skills directory:
+Paste this prompt into Claude Code — it clones the skill and wires up `~/.claude/CLAUDE.md` in one step:
 
-```bash
-git clone https://github.com/nai0om/buddhist-method ~/.claude/skills/buddhist-method
+```
+Install the buddhist-method skill:
+1. Run: git clone https://github.com/nai0om/buddhist-method ~/.claude/skills/buddhist-method
+2. Open ~/.claude/CLAUDE.md (create it if it does not exist) and append:
+
+## Working method
+For tasks involving factual claims, debugging, user pushback,
+or long multi-step work, consult the buddhist-method skill at
+~/.claude/skills/buddhist-method/SKILL.md before responding.
 ```
 
-Claude will load it automatically when the description matches the situation. You can also invoke it directly: ask Claude to "apply the buddhist-method skill" before a hard task.
+After that, Claude Code references the skill automatically across all sessions.
 
 ### With other Claude products
 

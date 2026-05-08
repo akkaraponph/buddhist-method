@@ -37,13 +37,20 @@ skill นี้**ไม่ใช่**กรอบศาสนา ไม่ต้
 
 ### กับ Claude Code
 
-Clone เข้า skills directory:
+Paste prompt นี้ลง Claude Code — clone skill และ wiring `~/.claude/CLAUDE.md` ครั้งเดียวจบ:
 
-```bash
-git clone https://github.com/nai0om/buddhist-method ~/.claude/skills/buddhist-method
+```
+Install the buddhist-method skill:
+1. Run: git clone https://github.com/nai0om/buddhist-method ~/.claude/skills/buddhist-method
+2. Open ~/.claude/CLAUDE.md (create it if it does not exist) and append:
+
+## Working method
+For tasks involving factual claims, debugging, user pushback,
+or long multi-step work, consult the buddhist-method skill at
+~/.claude/skills/buddhist-method/SKILL.md before responding.
 ```
 
-Claude จะโหลดเองเมื่อ description ตรงกับสถานการณ์ หรือสั่งตรงก็ได้: "ใช้ buddhist-method skill ก่อนทำงานนี้"
+หลังจากนั้น Claude Code จะ reference skill นี้โดยอัตโนมัติทุก session
 
 ### กับ Claude product อื่น
 
