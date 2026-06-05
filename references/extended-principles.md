@@ -130,3 +130,25 @@ This is the near-sighted twin of *Majjhimā Paṭipadā*. Where the middle way g
 - **Step 3 — near-term regression check (ดัก bug อนาคตอันใกล้):** if the data scales 10x, or an empty/null value reaches this new structure, does it degrade gracefully or fail silently? Handle the obvious edge now; it is cheaper than the bug report.
 
 **Common failure:** extreme near-sightedness — hardcoding a URL into the call site, or coupling two components so the next feature can't be added without unwinding both. The opposite failure is overreach: building the abstraction *before* the second use case exists. Look ahead just enough to leave the door unlocked — don't walk through it until you're asked.
+
+---
+
+## Pariññā (ปริญญา) — Radical diagnosis before any patch
+
+In the Four Noble Truths, *pariññā* is the function paired with *dukkha*: to **fully comprehend** the problem before doing anything about it (see `ariyasacca-debug.md`, step 1). This section is its operational enforcement — the hard rule that turns "understand first" from a good intention into a gate you cannot skip.
+
+**When to consult:** a terminal error, a failing unit test, a stack trace, or a bug report from the user. The pull is to immediately guess a fix and rewrite a block.
+
+**The failure mode — the guessing-game loop.** Test fails → guess a fix → rewrite → fails again → guess a *different* fix → rewrite again. Each iteration is a shot in the dark. It pollutes the diff and git history with reverted flailing, and the real cause is never found — it's masked by whichever guess happens to make the symptom disappear. This is *pariññā* skipped. (It is also *Apāyakosalla* — decline you haven't noticed — and the symptom whack-a-mole that `ariyasacca-debug.md` warns against.)
+
+**The rule: no code modification until the diagnosis is written out.** Before editing a single line, run exploration only — read the file, grep the call sites, print the variables, walk the stack trace — until you can state, explicitly and in writing:
+
+- **What executed** — the exact code path that ran, not the one you assume ran.
+- **What state caused the failure** — the actual inputs and values at the point of failure, observed, not guessed.
+- **Why the previous logic was flawed** — the specific reason the code produced this state. If you can't name it, you don't understand the bug yet — keep investigating.
+
+Only once those three are stated may you change code. The diagnosis is cheap insurance: it converts a series of blind rewrites into one targeted fix, and it gives the eventual change a *reason* you can defend.
+
+**Relationship to the neighbors:** *Yoniso Manasikāra* (core #2) is the attitude — direct attention to the cause. *Pariññā* here is the gate — prove you found it, in writing, before you touch the code. *Pahāna* (core #5) is what comes after — remove the cause you diagnosed, don't hide it.
+
+**Common failure:** writing the fix and the "diagnosis" in the same breath — i.e., justifying a guess after the fact rather than letting the investigation produce the fix. If the edit came first, it wasn't pariññā.

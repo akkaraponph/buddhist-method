@@ -26,6 +26,7 @@ Plus deeper references for harder situations:
 - **Atthatraya** — short-term vs long-term benefit trade-offs
 - **Majjhimā Paṭipadā** — the middle way for solution sizing
 - **Anāgataṃsa-ñāṇa** — bounded one-step foresight to avoid forced refactors
+- **Pariññā** — radical diagnosis: write out the cause before patching, no guessing-loop
 
 ## Why keep the Pali / Thai names
 
@@ -92,7 +93,7 @@ buddhist-method/
 ├── LICENSE                               # MIT
 └── references/
     ├── ariyasacca-debug.md               # Four Noble Truths as debug frame
-    └── extended-principles.md            # seven secondary principles
+    └── extended-principles.md            # eight secondary principles
 ```
 
 ## License
