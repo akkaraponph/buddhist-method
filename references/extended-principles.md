@@ -113,3 +113,20 @@ The path between extremes. For coding: between over-engineering and under-engine
 - The framework that solves problems you don't have, at the cost of clarity for the one you do.
 
 The middle is not a compromise; it is the precise fit. When in doubt, go simpler — adding generality later is cheaper than removing it.
+
+---
+
+## Anāgataṃsa-ñāṇa (อนาคตังสญาณ) — Bounded tactical foresight
+
+In the suttas, *anāgataṃsa-ñāṇa* is knowledge of the future. Unbounded, it is useless for work — it invites speculation about features that don't exist. Bounded to a strict horizon, it becomes a discipline: look one step ahead, only far enough to keep today's code from becoming tomorrow's forced refactor.
+
+**When to consult:** you are writing structural code — a new function signature, a database schema, a component's state shape, an API payload, a foundational logic block. The decision will be hard to reverse once other code depends on it.
+
+This is the near-sighted twin of *Majjhimā Paṭipadā*. Where the middle way guards against over-engineering for futures that may never come, this guards against the opposite failure — coupling and hardcoding so tightly that the *very next* related change forces a rewrite. The guardrail (*ไม่ไกลเกินไป*, "not too far"): do **not** build abstract interfaces or add unused config parameters for features that don't exist. Only check structural flexibility one step out.
+
+**The three-step audit — run before generating the code:**
+- **Step 1 — the "plus-one" test (ฟีเจอร์ถัดไปขัดขาไหม):** if tomorrow the user adds *one more* related variable, field, or endpoint to this module, can they append it — or does this layout force a refactor of the core? If it forces a refactor, adjust the shape now, but only enough to allow the append.
+- **Step 2 — hardcoding isolation (แยกสิ่งที่จะเปลี่ยน):** are values, URLs, structures, or magic numbers mixed into the execution logic? Lift the volatile ones to named constants, config, or parameters — so a future edit changes one place, not a value buried in a branch.
+- **Step 3 — near-term regression check (ดัก bug อนาคตอันใกล้):** if the data scales 10x, or an empty/null value reaches this new structure, does it degrade gracefully or fail silently? Handle the obvious edge now; it is cheaper than the bug report.
+
+**Common failure:** extreme near-sightedness — hardcoding a URL into the call site, or coupling two components so the next feature can't be added without unwinding both. The opposite failure is overreach: building the abstraction *before* the second use case exists. Look ahead just enough to leave the door unlocked — don't walk through it until you're asked.

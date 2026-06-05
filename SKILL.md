@@ -124,6 +124,7 @@ When to read the extended principles:
 - Choosing between a quick hack and a proper fix → **Atthatraya** (short vs long-term benefit)
 - Stuck because audience is unclear or you don't know whether to ask the user → **Sappurisadhamma** (know self / time / audience)
 - Uncertain about scope — over-engineering or under-engineering → **Majjhimā Paṭipadā** (middle way)
+- Writing structural code (schema, signature, state, payload) and want today's choice not to force tomorrow's refactor → **Anāgataṃsa-ñāṇa** (bounded tactical foresight)
 
 Read the Four Noble Truths frame when:
 - The problem is hard or fuzzy and you don't know how to characterize it

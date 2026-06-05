@@ -25,6 +25,7 @@ Plus deeper references for harder situations:
 - **Sappurisadhamma (3 of 7)** — knowing self / time / audience
 - **Atthatraya** — short-term vs long-term benefit trade-offs
 - **Majjhimā Paṭipadā** — the middle way for solution sizing
+- **Anāgataṃsa-ñāṇa** — bounded one-step foresight to avoid forced refactors
 
 ## Why keep the Pali / Thai names
 
@@ -91,7 +92,7 @@ buddhist-method/
 ├── LICENSE                               # MIT
 └── references/
     ├── ariyasacca-debug.md               # Four Noble Truths as debug frame
-    └── extended-principles.md            # six secondary principles
+    └── extended-principles.md            # seven secondary principles
 ```
 
 ## License
