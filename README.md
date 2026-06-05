@@ -21,6 +21,7 @@ Plus deeper references for harder situations:
 - The **Four Noble Truths** as a debugging frame (`references/ariyasacca-debug.md`)
 - **Apāyakosalla** — recognizing decline / anti sunk-cost
 - **Appamāda** — heedfulness across long tasks
+- **Iddhipāda 4** — the four bases of carrying a task to accomplishment
 - **Sappurisadhamma (3 of 7)** — knowing self / time / audience
 - **Atthatraya** — short-term vs long-term benefit trade-offs
 - **Majjhimā Paṭipadā** — the middle way for solution sizing
@@ -90,7 +91,7 @@ buddhist-method/
 ├── LICENSE                               # MIT
 └── references/
     ├── ariyasacca-debug.md               # Four Noble Truths as debug frame
-    └── extended-principles.md            # five secondary principles
+    └── extended-principles.md            # six secondary principles
 ```
 
 ## License
