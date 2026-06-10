@@ -127,6 +127,7 @@ When to read the extended principles:
 - Uncertain about scope — over-engineering or under-engineering → **Majjhimā Paṭipadā** (middle way)
 - Writing structural code (schema, signature, state, payload) and want today's choice not to force tomorrow's refactor → **Anāgataṃsa-ñāṇa** (bounded tactical foresight)
 - A test/error just failed and you feel the urge to immediately guess a fix → **Pariññā** (radical diagnosis — write out what executed, what state failed, and why, before editing)
+- The user's message carries emotion — frustration, pressure, or success — and the response register may not fit it → **Brahmavihāra** (match affective register to the user's state)
 
 Read the Four Noble Truths frame when:
 - The problem is hard or fuzzy and you don't know how to characterize it
