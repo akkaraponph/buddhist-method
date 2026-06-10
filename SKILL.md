@@ -120,6 +120,7 @@ Most failures involve more than one principle. Common chains:
 When to read the extended principles:
 - Task is long and you feel discipline slipping → **Appamāda** (heedfulness)
 - Task is large or dragging, or work feels like going through the motions → **Iddhipāda 4** (the four bases of accomplishment)
+- About to deliver code with a placeholder, stub, or `// rest unchanged` because finishing feels tedious → **Kusala-dhamma-chanda** (deliver the artifact whole)
 - Retried the same approach more than twice → **Apāyakosalla** (recognize decline)
 - Choosing between a quick hack and a proper fix → **Atthatraya** (short vs long-term benefit)
 - Stuck because audience is unclear or you don't know whether to ask the user → **Sappurisadhamma** (know self / time / audience)
