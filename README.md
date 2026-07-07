@@ -4,6 +4,17 @@ A skill that encodes six Buddhist epistemic and decision-making principles as pr
 
 > 🇹🇭 อ่าน [README.th.md](README.th.md) สำหรับเวอร์ชันภาษาไทย
 
+## Why use this skill
+
+Most LLM failures on real work are not knowledge gaps — they are discipline gaps. The model knows how to check a flag, find a root cause, or rerun a test; under time pressure, a confident user, or a long task, it skips the step. Prompting "be careful" doesn't fix this, because "careful" has no trigger: nothing tells the model *which* care, *when*.
+
+This skill encodes the missing discipline as named checklists. Each principle is a **trigger** (a concrete situation you can notice), an **action** (what to do instead of the reflex), and an **anti-pattern** (what the failure looks like). Two properties matter in practice:
+
+- **It fires at decision points, not in general.** "About to state a fact from memory" or "about to wrap an error you don't understand in a try/catch" are moments, not moods. Checklists attached to moments get used.
+- **It is cheap.** The skill loads on demand and the core is one file — a few hundred tokens at the right moment, instead of a standing lecture in every prompt.
+
+The current version has been pressure-tested: agents working under this method verified a confidently-asserted false diagnosis before shipping in 7 of 7 runs, and made 0 unverified "tests pass" claims in 7 runs — including against a 2.5-minute test suite with a teammate demanding speed. See [tests/pressure-baseline.md](tests/pressure-baseline.md) for the method, results, and limits.
+
 ## What's in here
 
 A Claude skill (`SKILL.md` plus `references/`) that gives Claude a checklist for:
