@@ -93,9 +93,11 @@ buddhist-method/
 ├── README.md                             # เวอร์ชันอังกฤษ
 ├── README.th.md                          # ไฟล์นี้
 ├── LICENSE                               # MIT
-└── references/
-    ├── ariyasacca-debug.md               # อริยสัจ 4 เป็นกรอบ debug
-    └── extended-principles.md            # 10 หลักรอง
+├── references/
+│   ├── ariyasacca-debug.md               # อริยสัจ 4 เป็นกรอบ debug
+│   └── extended-principles.md            # 10 หลักรอง
+└── tests/
+    └── pressure-baseline.md              # บันทึกผล pressure test (RED baseline)
 ```
 
 ## License
@@ -115,3 +117,5 @@ MIT — ใช้ แก้ไข แจกต่อได้เสรี ดู
 3. ทำไมหลักที่มีอยู่ยังจับไม่ได้
 
 มาตรฐานของ skill นี้คือ**ความกระชับ** — เพิ่มหลักง่าย แต่ที่ยากคือรักษาจำนวนให้น้อยพอที่จะใช้จริง
+
+ดู [tests/pressure-baseline.md](tests/pressure-baseline.md) เป็นตัวอย่างหลักฐานที่ใช้ได้ — บันทึก pressure test ที่รันกับ skill เวอร์ชันปัจจุบัน รวมถึง failure mode หนึ่งที่สังเกตเห็นแล้วแต่ยังไม่ได้บัญญัติ (การคุมขอบเขตงาน)

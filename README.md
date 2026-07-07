@@ -93,9 +93,11 @@ buddhist-method/
 ├── README.md                             # this file
 ├── README.th.md                          # Thai version
 ├── LICENSE                               # MIT
-└── references/
-    ├── ariyasacca-debug.md               # Four Noble Truths as debug frame
-    └── extended-principles.md            # ten secondary principles
+├── references/
+│   ├── ariyasacca-debug.md               # Four Noble Truths as debug frame
+│   └── extended-principles.md            # ten secondary principles
+└── tests/
+    └── pressure-baseline.md              # pressure-test record (RED baseline)
 ```
 
 ## License
@@ -115,3 +117,5 @@ If proposing a new principle, please show:
 3. Why an existing principle doesn't already cover it.
 
 The bar is keeping the skill tight. New principles are easy to add; what's hard is keeping the set small enough to actually be used.
+
+See [tests/pressure-baseline.md](tests/pressure-baseline.md) for the kind of evidence that counts — a pressure-test baseline run against the current skill, including one candidate failure mode (scope containment) observed but not yet codified.
